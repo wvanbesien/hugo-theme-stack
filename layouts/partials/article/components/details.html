@@ -31,12 +31,21 @@
 
     <footer class="article-time">
         {{ if $showDate }}
+<<<<<<< HEAD
         <div>
             {{ partial "helper/icon" "date" }}
             <time class="article-time--published">
                 {{- .Date.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") -}}
             </time>
         </div>
+=======
+            <div>
+                {{ partial "helper/icon" "date" }}
+                <time class="article-time--published">
+                    {{- .Date | time.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") -}}
+                </time>
+            </div>
+>>>>>>> 087989e4274f24a472d16d7c35d394a227fed47a
         {{ end }}
         {{ if $showReadingTime }}
         <div>

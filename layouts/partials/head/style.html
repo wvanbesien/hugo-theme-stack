@@ -1,3 +1,7 @@
 {{ $sass := resources.Get "scss/style.scss" }}
+<<<<<<< HEAD
 {{ $style := $sass | css.Sass | minify | resources.Fingerprint "sha256" }}
+=======
+{{ $style := $sass | toCSS | minify | resources.Fingerprint "sha256" }}
+>>>>>>> 087989e4274f24a472d16d7c35d394a227fed47a
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
