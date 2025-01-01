@@ -2,11 +2,7 @@
 {{- $disqusjs := .Site.Params.Comments.disqusjs -}}
 {{- if and (not $pc.Disable) (and $disqusjs.Shortname $disqusjs.ApiKey) -}}
 
-<<<<<<< HEAD
-{{- $style := resources.Get "scss/partials/comments/disqusjs.scss" | css.Sass | minify -}}
-=======
 {{- $style := resources.Get "scss/partials/comments/disqusjs.scss" | toCSS | minify -}}
->>>>>>> 087989e4274f24a472d16d7c35d394a227fed47a
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 ß
 <div class="disqus-container">
